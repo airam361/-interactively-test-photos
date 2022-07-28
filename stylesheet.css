@@ -1,0 +1,64 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+}
+
+.photo-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.container-photo {
+  position: relative;
+  display: flex;
+  width: 91vmin;
+  overflow: hidden;
+  background-color: black;
+}
+
+.container-photo img {
+  display: flex;
+  flex-grow: 1;
+  height: 50vmin;
+  opacity: 0.6;
+}
+
+.photo-text {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  font-size: 5rem;
+  color: #fff;
+  animation: enterTitle 1.5s ease-in-out
+}
+
+@keyframes enterTitle {
+  from {
+    left: -50%
+  }
+
+  to {
+    left: 50%
+  }
+
+}
+
+.container-photo:hover .photo-text {
+  font-weight: bolder;
+  color: red
+}
